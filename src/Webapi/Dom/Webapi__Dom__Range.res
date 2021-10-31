@@ -1,6 +1,6 @@
 type t = Dom.range
 
-@new external make: unit => t = "Range" /* experimental */
+@new external make: unit => t = "Range"
 
 @get external collapsed: t => bool = ""
 @get external commonAncestorContainer: t => Dom.node = ""
@@ -38,16 +38,15 @@ let compareBoundaryPoint: (
 @send external cloneRange: t => t = ""
 @send external detach: t => unit = ""
 @send external toString: t => string = ""
-@send external comparePoint: (t, Dom.node_like<'a>, int) => int /* compareRsult enum */ = ""
+@send external comparePoint: (t, Dom.node_like<'a>, int) => int = ""
 let comparePoint: (t, Dom.node_like<'a>, int) => Webapi__Dom__Types.compareResult = (
   self,
   node,
   offset,
 ) => Webapi__Dom__Types.decodeCompareResult(self->comparePoint(node, offset))
 @send
-external createContextualFragment: (t, string) => Dom.documentFragment =
-  "" /* experimental, but widely supported */
-@send external getBoundingClientRect: t => Dom.domRect = "" /* experimental, but widely supported */
-@send external getClientRects: t => array<Dom.domRect> = "" /* experimental, but widely supported */
+external createContextualFragment: (t, string) => Dom.documentFragment = ""
+@send external getBoundingClientRect: t => Dom.domRect = ""
+@send external getClientRects: t => Webapi__Dom__RectList.t = ""
 @send external intersectsNode: (t, Dom.node_like<'a>) => bool = ""
 @send external isPointInRange: (t, Dom.node_like<'a>, int) => bool = ""

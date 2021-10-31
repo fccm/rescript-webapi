@@ -10,6 +10,7 @@ Done:
 * Imported `bs-fetch` and converted it to "t-first" (#31)
 * Added `WebSocket` bindings (#34)
 * Updated `Document.elementFromPoint` api to account for null return values (#35)
+* Updated `getClientRects` method on `Document` and `Range` to return a `Dom.RectList.t`
 
 Todo:
 * Convert more input types to `node_like` and `element_like` to improve usability

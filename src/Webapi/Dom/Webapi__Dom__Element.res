@@ -74,7 +74,7 @@ module Impl = (
   @send @return(nullable) external getAttribute: (T.t, string) => option<string> = ""
   @send @return(nullable) external getAttributeNS: (T.t, string, string) => option<string> = ""
   @send external getBoundingClientRect: T.t => Dom.domRect = ""
-  @send external getClientRects: T.t => array<Dom.domRect> = ""
+  @send external getClientRects: T.t => Webapi__Dom__RectList.t = ""
   @send external getElementsByClassName: (T.t, string) => Dom.htmlCollection = ""
   @send external getElementsByTagName: (T.t, string) => Dom.htmlCollection = ""
   @send external getElementsByTagNameNS: (T.t, string, string) => Dom.htmlCollection = ""
