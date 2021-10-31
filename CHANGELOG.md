@@ -7,10 +7,13 @@
 * Updated `Window.getSelection` api to return an option (#15)
 * Updated `Document.elementFromPoint` api to return an option and be @nullable (#35)
 
-### Added
-* `scrollToWithOptions` method to `window` (#26)
-* `IntersectionObserver` and `IntersectionObserverEntry` bindings (#27)
+### Added and Updated (non-breaking)
 * `WebSocket` bindings (#34)
+* `IntersectionObserver` and `IntersectionObserverEntry` bindings (#27)
+* `scrollToWithOptions` method to `window` (#26)
+* `setActiveElement` to `Document`
+* `HtmlDocument` methods `hasFocus` and `activeElement` moved to `Document`
+  * They're still available on `HtmlDocument` thanks to the `include` structure
 
 ### Miscellaneous
 * Converted project to rescript syntax (#18)
